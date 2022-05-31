@@ -46,7 +46,7 @@ namespace Assessment2
                 }
             }
         }
-        public static int GetTotal(int[] Rolls)
+        public static int GetTotal(int[] Rolls) // loops for the amount of elements in array with .Length and adds them together
         {
             int Total = 0;
             for (int i = 0; i < Rolls.Length; i++)
@@ -55,13 +55,13 @@ namespace Assessment2
             }
             return Total;
         }
-        public static decimal GetAverage(int[] Rolls)
+        public static decimal GetAverage(int[] Rolls) // Uses the getTotal function and divides by by number of elements in array
         {
             int sum = GetTotal(Rolls);
             decimal average = (decimal)sum / Rolls.Length;
             return average;
         }
-        public static void RollList(int[] Rolls)
+        public static void RollList(int[] Rolls) //counts number of rolls and prints as array
         {
             Console.WriteLine("------");
             Console.WriteLine($" Amount of Rolls = {Rolls.Count()}");
